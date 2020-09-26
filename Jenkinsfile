@@ -45,6 +45,31 @@ pipeline {
         script {
           sh './gradlew test'
         }
+		
+      }
+    }
+	stage('ArtifactUpload nexus2') {
+      steps {
+        script {
+          sh './gradlew nexus2'
+        }
+		
+      }
+    }
+	stage('ArtifactUpload nexus3') {
+      steps {
+        script {
+          sh './gradlew nexus3'
+        }
+		
+      }
+    }
+	stage('Sonar code quality Tests') {
+      steps {
+        script {
+          sh './gradlew sonar'
+        }
+		
       }
     }
   }
