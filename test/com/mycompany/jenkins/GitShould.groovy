@@ -57,6 +57,13 @@ class GitShould extends Specification {
         expect:
         git.commitHash() == COMMIT_HASH.substring(0, 7).trim()
     }
+	def 'trim commit author'() {
+        given:
+        script.sh([script: 'git log --format=\'%an\' -n 1 HEAD', returnStdout: true]) >> COMMIT_AUTHOR
+
+        expect:
+        git.commitAuthor() == COMMIT_AUTHOR.substring(0, 80).trim()
+    }
 	
 
 }
