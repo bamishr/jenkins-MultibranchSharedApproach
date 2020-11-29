@@ -48,4 +48,11 @@ def RegressionTest(Map args) {
     }
   }
   return this
+def DeployQA(Map args) {
+  node {
+    stage('DeployQA') {
+      echo "Command: ${args.command}"
+    }
+  }
+  return this
 }
