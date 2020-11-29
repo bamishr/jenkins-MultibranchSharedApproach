@@ -50,5 +50,13 @@ class GitShould extends Specification {
         expect:
         git.isMasterBranch()
     }
+	  def 'trim commit hash'() {
+        given:
+        script.sh([script: 'git rev-parse HEAD', returnStdout: true]) >> COMMIT_HASH
+
+        expect:
+        git.commitHash() == COMMIT_HASH.substring(0, 7).trim()
+    }
+	
 
 }
