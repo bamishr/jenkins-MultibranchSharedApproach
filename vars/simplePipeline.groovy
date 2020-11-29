@@ -8,6 +8,13 @@ def call(Map args) {
   }
   return this
 }
+def Prechecks(Map args) {
+  node {
+    stage('Prechecks') {
+      echo "Command: ${args.command}"
+    }
+  }
+  return this
 
 def build(Map args) {
   node {
