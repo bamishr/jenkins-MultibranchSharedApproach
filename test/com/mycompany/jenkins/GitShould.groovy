@@ -18,6 +18,13 @@ class GitShould extends Specification {
         script = Spy(WorkflowScriptStub)
         git = new Git(script)
     }
+	def 'trim commit author'() {
+        given:
+        script.sh([script: 'git log --format=\'%an\' -n 1 HEAD', returnStdout: true]) >> COMMIT_AUTHOR
+
+        expect:
+        git.commitAuthor() == COMMIT_AUTHOR.substring(0, 80).trim()
+    }
 
     def 'trim commit message'() {
         given:
