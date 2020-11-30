@@ -29,6 +29,11 @@ Parameters:
     Default: 20
     Type: "String"
     Description: "This is the metric on which the alarm is activated.  Our metric is percentage of CPU usage that will trigger the scaling group"
+  CPUAlarmLowThreshold:
+    Default: 20
+    Type: "String"
+    Description: "This is the metric on which the alarm is activated.  Our metric is percentage of CPU usage that will trigger the scaling group"  
+  
 
   UpdatePauseTime:
     Default: "PT0S"
