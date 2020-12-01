@@ -30,6 +30,11 @@ Mappings:
 #
 # Then when attempting to SSH into the instance we can provide the private half
 # See https://gist.github.com/Integralist/438898d6164daebec0c9
+Mappings:
+  RegionMap:
+    eu-west-1:
+      AMI:
+        - "ami-47cefa33"
 Resources:
   Ec2Instance:
     Type: "AWS::EC2::Instance"
