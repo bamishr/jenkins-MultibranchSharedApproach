@@ -40,6 +40,11 @@ Mappings:
     eu-west-1:
       AMI:
         - "ami-47cefa33"
+Mappings:
+  RegionMap:
+    eu-west-1:
+      AMI:
+        - "ami-47cefa33"
 Resources:
   Ec2Instance:
     Type: "AWS::EC2::Instance"
