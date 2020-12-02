@@ -43,6 +43,13 @@
 			"MaxLength" : "64",
 			"AllowedPattern" : "[a-zA-Z][a-zA-Z0-9]*"
 		},
+		"DatabaseName" : {
+			"Type" : "String",
+			"Default" : "wordpress",
+			"MinLength" : "1",
+			"MaxLength" : "64",
+			"AllowedPattern" : "[a-zA-Z][a-zA-Z0-9]*"
+		},
 		"DatabasePassword" : {
 			"Type" : "String",
 			"MinLength" : "8",
