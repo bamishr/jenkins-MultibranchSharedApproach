@@ -236,6 +236,10 @@ Resources:
               cwd: "/var/www/html/wordpress"
               command: !Sub |
                 myip=`cat ip.address` && echo "update_option('home','http://${!myip}/wordpress');" >> /var/www/html/wordpress/wp-content/themes/twentyseventeen/functions.php
+            08a_update_theme_2:
+              cwd: "/var/www/html/wordpress"
+              command: !Sub |
+                myip=`cat ip.address` && echo "update_option('home','http://${!myip}/wordpress');" >> /var/www/html/wordpress/wp-content/themes/twentyseventeen/functions.php
   S3:
     Type: "AWS::S3::Bucket"
     DeletionPolicy: Retain
