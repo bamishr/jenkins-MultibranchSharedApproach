@@ -49,6 +49,12 @@ Mappings:
       "AMALINUX" : "ami-b777e4db" # AMALINUX SEP 2016
     ap-south-1:
       "AMALINUX" : "ami-cacbbea5" # AMALINUX SEP 2016
+    ap-south-1:
+      "AMALINUX" : "ami-cacbbea5" # AMALINUX SEP 2016
+    sa-east-1:
+      "AMALINUX" : "ami-b777e4db" # AMALINUX SEP 2016
+    ap-south-1:
+      "AMALINUX" : "ami-cacbbea5" # AMALINUX SEP 2016
     sa-east-1:
       "AMALINUX" : "ami-b777e4db" # AMALINUX SEP 2016
     ap-south-1:
