@@ -39,6 +39,19 @@ pipeline {
         }
       }
     }
+	stage('sidecar') {
+      steps {
+        script {
+          COMMIT_MESSAGE = git.commitMessage()
+          COMMIT_AUTHOR = git.commitAuthor()
+
+          build.setBuildDescription(
+            message: COMMIT_MESSAGE,
+            description: COMMIT_AUTHOR
+          )
+        }
+      }
+    }
 
     stage('Unit Tests') {
       steps {
